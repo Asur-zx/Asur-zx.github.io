@@ -11,6 +11,9 @@
     --primary: #171717;
     --primaryonhover: #2e2e2e;
     --text: #ffffff;
+
+    --workdim : 20vw;
+
     --bg1: url('/public/backgroundimages/redandwhite.jpg');
     --bg2: url('/public/backgroundimages/wavesred.jpg');
     --bg3: url('/public/backgroundimages/caveblue.jpg');
@@ -136,6 +139,71 @@
 .imageart img{
     width: 100%;
     height: auto;
+}
+
+/* W O R K S */
+#Works{
+    width: 98vw;
+    min-height: 98vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workgrid{
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+.workrow{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* H O B B Y */
+#Hobby{
+    width: 98vw;
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hobbygrid{
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+.hobbyrow{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.work{
+    width: var(--workdim);
+    height: var(--workdim);
+    overflow: hidden;
+    margin: 1vh;
+    border-radius: 0.5vw;
+}
+.work img{
+    width: var(--workdim);
+}
+
+/* C O N T A C T */
+#Contact{
+    width: 98vw;
+    min-height: 98vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @keyframes float {
     0%, 100% {
