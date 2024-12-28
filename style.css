@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -21,8 +21,8 @@
 
 
 
-/* B A C K G R O U N D */
-.background{
+/* B O R D E R*/
+.border{
     font-family: "Quicksand", sans-serif;
     height: 100vh;
     background-color: var(--primary);
@@ -72,6 +72,7 @@
 }
 
 
+
 /* main content */
 .mainContent{
     width: 98vw;
@@ -80,145 +81,69 @@
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: none;
-    background-color: var(--secondary);
+    background-color: (--secondary);
+    font-family: "Rubik Mono One", serif;
+  font-weight:lighter;
+  font-style: normal;
+}
+
+
+.intro{
+    /* background-color: rgb(189,46,50); */
 }
 
 /* H O M E */
 
-/* I N T R O */
 #Home{
     width: 98vw;
     min-height: 98vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .intro{
-    width: 80vw;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--primary);
-    opacity: 0.9;
-    color: var(--text);
+    padding: 2rem;
+    height: 80vh;
+    position: relative;
+    width: 90vw;
     border-radius: 0.5vw;
     font-weight: normal;
+    color: rgb(164, 164, 165);
     box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-.introtext{
-    height: 78vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 1vw;
-    flex-direction: column;
-}
-.introtext span{
-    margin: 5px;
-    color: rgb(255, 17, 0)    ;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 5rem;
- 
-}
-.introbold{
-    display: flex;
-    text-align: center;
-    font-size: 3rem;
-}
-.imageart{
-    width: 50%;
-    height: 78vh;
-    overflow: hidden;
-    border-radius: 0.5vw;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5vh;
-    box-shadow: 5px 0 10px var(--primary);
-    animation: float 30s ease-in-out infinite; /* Animation */
-}
-.imageart img{
-    width: 100%;
-    height: auto;
-}
-
-/* W O R K S */
-#Works{
-    width: 98vw;
-    min-height: 98vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.workgrid{
-    padding: 2vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 80%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
-.workrow{
+.intro_texts{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-}
-
-/* H O B B Y */
-#Hobby{
-    width: 98vw;
-    min-height: 98vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-.hobbygrid{
-    padding: 2vh;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 80%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
-.hobbyrow{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
+#intro_hi{
+    color: #949494;
+    font-size: x-large;
 }
-.work{
-    width: var(--workdim);
-    height: var(--workdim);
-    overflow: hidden;
-    margin: 1vh;
-    border-radius: 0.5vw;
+#intro_name #space{
+    width: 7vw;
 }
-.work img{
-    width: var(--workdim);
+#intro_name{
+    color: var(--maincolor);
+    font-family: "Rubik Mono One", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 7rem;
+    margin: 18vh;
+    transition: box-shadow 0.4s ease;
 }
+#intro_name:hover{
+    box-shadow: 0 0 2px rgba(0, 255, 255, 1), 0 0 4px rgba(0, 255, 255, 0.8), 0 0 6px rgba(0, 255, 255, 0.6);
 
-/* C O N T A C T */
-#Contact{
-    width: 98vw;
-    min-height: 98vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-@keyframes float {
-    0%, 100% {
-        transform: translate(0,0); /* Start and end position */
-    }
-    20% {
-        transform: translate(-10px, -10px); /* Move up */
-    }
-    40% {
-        transform: translate(-10px, 10px); /* Start and end position */
-    }
-    60% {
-        transform: translate(10px, -10px); /* Move up */
-    }
-    80% {
-        transform: translate(10px, 10px); /* Move up */
-    }
+#intro_normal{
+    font-size: large;
+
 }
