@@ -1,0 +1,76 @@
+<div id='person_select_container'>
+    <div id="mode_select"></div>
+    <div class="person_mode" id='active'>Developer</div>
+    <div class="person_mode">Artist</div>
+</div>
+
+<style>
+    #person_select_container{
+        position: relative;
+        padding: 1rem;
+        display:         flex;
+        justify-content: center;
+        align-items:     center;
+        gap: 1rem;
+        z-index: 15;
+    }
+
+    .person_mode{
+        color: var(--secondary);
+        font-size: var(--header_size);
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    #active{
+        color: var(--primary);
+    }
+
+    #mode_select{
+        position: absolute;
+        background-color: var(--secondary);
+        transition: 0.4s ease;
+        z-index: 1;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const person_mode = Array.from(document.getElementsByClassName('person_mode'));
+        const active_mode_element = person_mode.find(el => el.id='active') as HTMLElement;
+
+        update_selector(active_mode_element);
+
+        person_mode.forEach((el) => {
+            el.addEventListener('click', (event) => update_mode_selector_ui(event.target as HTMLElement));
+        })
+
+        function update_mode_selector_ui(target: HTMLElement){
+            activate_id();
+            target.id = 'active';
+            update_selector(target);
+        }
+
+        function activate_id(){
+            person_mode.forEach((el) =>{
+                if(el.id = 'active'){
+                    el.id = '';
+                }
+            })
+        }
+
+        function update_selector(target : HTMLElement){
+            const selector = document.getElementById('mode_select');
+            const mode_metrics = target.getBoundingClientRect();
+            const parent_metrics = selector.parentElement.getBoundingClientRect();
+
+            selector.style.width = `${mode_metrics.width}px`;
+            selector.style.height = `${mode_metrics.height}px`;
+            selector.style.left = mode_metrics.x - parent_metrics.x + 'px';
+            selector.style.top = mode_metrics.y - parent_metrics.y + 'px';
+
+            console.log(mode_metrics, selector.style.left, selector.style.top);
+        }
+    });
+</script>

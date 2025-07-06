@@ -1,0 +1,23 @@
+---
+import HOME    from '@components/Homepage.astro';
+import Layout  from '@layouts/Layout.astro';
+import Logo    from '@public/logo.svg';
+import Contact from '@components/Contact.astro';
+import Works   from '@components/Works.astro';
+---
+
+<Layout>
+    <img class='page_logo' src={Logo.src}>
+    <Contact />
+    <HOME />
+    <Works />
+</Layout>
+
+<style>
+    .page_logo{
+        position : fixed;
+        top: 0;
+        width: 5rem;
+        z-index: 5;
+    }
+</style>
